@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="recipientMessageCell" rowHeight="107" id="O1i-7y-b9P" customClass="RecipientMessageCell" customModule="IOSChat" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="454" height="107"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="O1i-7y-b9P" id="nR3-SE-Qbs">
+                <rect key="frame" x="0.0" y="0.0" width="454" height="107"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <stackView opaque="NO" contentMode="scaleToFill" alignment="top" spacing="14" translatesAutoresizingMaskIntoConstraints="NO" id="qqi-l2-9x0">
+                        <rect key="frame" x="10" y="10" width="394" height="67"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="zJn-DA-eId" customClass="CustomImage" customModule="IOSChat" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="0.0" width="40" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="40" id="1YM-dP-HtN"/>
+                                    <constraint firstAttribute="height" constant="40" id="gbQ-Zh-9Sb"/>
+                                </constraints>
+                            </imageView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Ols-Sb-au8" customClass="CustomChatCellView" customModule="IOSChat" customModuleProvider="target">
+                                <rect key="frame" x="54" y="0.0" width="340" height="67"/>
+                                <subviews>
+                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" scrollEnabled="NO" editable="NO" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="SOi-Qs-cgs" customClass="CustomTextView" customModule="IOSChat" customModuleProvider="target">
+                                        <rect key="frame" x="10" y="10" width="320" height="47"/>
+                                        <color key="backgroundColor" systemColor="systemOrangeColor"/>
+                                        <color key="textColor" systemColor="labelColor"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                    </textView>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemOrangeColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="bottom" secondItem="SOi-Qs-cgs" secondAttribute="bottom" constant="10" id="BQZ-TA-OOX"/>
+                                    <constraint firstItem="SOi-Qs-cgs" firstAttribute="top" secondItem="Ols-Sb-au8" secondAttribute="top" constant="10" id="WGX-Xo-arp"/>
+                                    <constraint firstAttribute="trailing" secondItem="SOi-Qs-cgs" secondAttribute="trailing" constant="10" id="ize-v8-zmy"/>
+                                    <constraint firstItem="SOi-Qs-cgs" firstAttribute="leading" secondItem="Ols-Sb-au8" secondAttribute="leading" constant="10" id="y97-A7-Ewo"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                    </stackView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Date" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mV1-bT-87h">
+                        <rect key="frame" x="63" y="87" width="381" height="10"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="8"/>
+                        <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                <constraints>
+                    <constraint firstItem="mV1-bT-87h" firstAttribute="leading" secondItem="nR3-SE-Qbs" secondAttribute="leading" constant="63" id="Dej-oj-gIw"/>
+                    <constraint firstItem="mV1-bT-87h" firstAttribute="top" secondItem="qqi-l2-9x0" secondAttribute="bottom" constant="10" id="EWE-UG-sHU"/>
+                    <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="qqi-l2-9x0" secondAttribute="trailing" constant="50" id="EXC-Ya-oOm"/>
+                    <constraint firstItem="qqi-l2-9x0" firstAttribute="leading" secondItem="nR3-SE-Qbs" secondAttribute="leading" constant="10" id="bAg-pg-eXF"/>
+                    <constraint firstItem="qqi-l2-9x0" firstAttribute="top" secondItem="nR3-SE-Qbs" secondAttribute="top" constant="10" id="sV7-nc-Ytl"/>
+                    <constraint firstAttribute="trailing" secondItem="mV1-bT-87h" secondAttribute="trailing" constant="10" id="wQB-JH-iRP"/>
+                    <constraint firstAttribute="bottom" secondItem="mV1-bT-87h" secondAttribute="bottom" constant="10" id="xTy-V0-dxc"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="MgQ-6k-D4a"/>
+            <connections>
+                <outlet property="contactImage" destination="zJn-DA-eId" id="WHg-40-iAw"/>
+                <outlet property="dateLabel" destination="mV1-bT-87h" id="ORp-7O-vj9"/>
+                <outlet property="messageBody" destination="Ols-Sb-au8" id="1w0-5D-QhK"/>
+                <outlet property="messageText" destination="SOi-Qs-cgs" id="jTH-VN-Jxm"/>
+            </connections>
+            <point key="canvasLocation" x="-217.39130434782609" y="-160.37946428571428"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <systemColor name="labelColor">
+            <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemOrangeColor">
+            <color red="1" green="0.58431372549019611" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>
